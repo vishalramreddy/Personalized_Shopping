@@ -38,7 +38,7 @@ def fetch_product_details(data):
     return product_details
 
 # Load Data
-file_path = 'amazon_new.csv'
+file_path = 'Final_Year_Project_Codes/amazon_new.csv'
 data = load_data(file_path)
 
 
