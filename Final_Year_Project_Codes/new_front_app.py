@@ -47,6 +47,52 @@ data = load_data(file_path)
 #st.set_page_config(page_title="Personalized Shopping", layout="wide")
 st.title("🛍️ Personalized Shopping Experience")
 
+st.markdown(
+    "<p style='text-align: center; color: whitesmoke; font-size: 20px'>"
+    "Discover the best products tailored to your preferences! "
+    "Our AI-driven recommendation system helps you find top-rated products, "
+    "compare prices, and make informed purchase decisions effortlessly."
+    "</p>",
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+        [data-testid="stAppViewContainer"] {
+            background-color: #121212;
+        }
+        [data-testid="stSidebar"] {
+            background-color: #1E1E1E;
+        }
+        h1, h2, h3, h4, h5, h6,p {
+            color: white;
+            
+        }
+
+        .stHeading{
+            color: whitesmoke;
+        }
+
+        button p{
+          color: black;
+        }
+
+        [data-testid="stSliderTickBar"]{
+          color: whitesmoke;
+        }
+        
+        
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # Sidebar Filters
 categories = sorted(data['specific_category'].unique())
 selected_category = st.sidebar.selectbox("Select a Category", categories)
